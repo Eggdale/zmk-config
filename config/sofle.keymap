@@ -58,7 +58,7 @@
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &kp F12    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                   &kp F6    &kp F7    &kp F8   &kp F9    &kp F10  &kp F11
-&trans     &trans       &trans       &C_PP        &trans       &kp C_VOL_UP             &trans    &kp INS   &kp HOME &kp PG_UP &kp N0   &trans
+&trans     &trans       &trans       &kp C_PP     &trans       &kp C_VOL_UP             &trans    &kp INS   &kp HOME &kp PG_UP &trans   &trans
 &trans     &trans       &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN             &trans    &kp DEL   &kp END  &kp PG_DN &trans   &trans
 &trans     &trans       &trans       &trans       &trans       &trans  &none    &trans  &trans    &trans    &trans   &trans    &trans   &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
