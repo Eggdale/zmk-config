@@ -1,0 +1,5 @@
+pim447_trackball@a {
+		compatible = "pimoroni,pim447_trackball";
+		reg = <0xa>;
+		label = "PIM447_TRACKBALL";
+	};
