@@ -10,10 +10,6 @@ manifest:
       url-base: https://github.com/w84miracle
   projects:
     - name: zmk
-      remote: w84miracle
-      revision: mouse-pim447
-      import: app/west.yml
-    - name: zmk2
       remote: cdc-mkb
       revision: mouse-pim447
       import: app/west.yml
