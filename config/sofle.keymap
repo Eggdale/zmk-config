@@ -54,14 +54,14 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // | F12 | F1   | F2   |  F3   |  F4   |  F5  |                |  F6  |  F7  |  F8   |  F9  |  F10  |  F11  |
-// |     |      | PLAY |       |VOL_UP |      |                |      | LCLK |  MUP  | RCLK |       |       |
-// |     |PREV  | STOP | NEXT  |VOL_DN |      |                |      | MLFT |  MDN  | MRGT |       |       |
+// |     |      | PLAY |       |VOL_UP |      |                |SCRLUP| LCLK |  MUP  | RCLK |       |       |
+// |     |PREV  | STOP | NEXT  |VOL_DN |      |                |SCRLDN| MLFT |  MDN  | MRGT |       |       |
 // |     |      |      |       |       |      |      |  |BT_CLR|BT_SEL|BT_SEL|BT_SEL |BT_SEL|BT_SEL |OUT_TOG|
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &kp F12    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6    &kp F7    &kp F8   &kp F9    &kp F10  &kp F11
-&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &trans    &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       &trans   &trans
-&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &trans    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans   &trans
+&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &mwh SCROLL_UP   &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       &trans   &trans
+&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &mwh SCROLL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans   &trans
 &trans     &trans       &trans       &trans       &trans       &trans  &none    &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &out OUT_TOG
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
