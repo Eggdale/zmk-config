@@ -14,3 +14,11 @@
 &left_encoder {
     status = "okay";
 };
+
+nice_view_spi: &spi0 {
+    compatible = "nordic,nrf-spim";
+    mosi-pin = <24>;
+    sck-pin = <100>;
+    miso-pin = <2>; // unused on sweep
+    cs-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+};
