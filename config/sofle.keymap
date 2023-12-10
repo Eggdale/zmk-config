@@ -15,8 +15,8 @@
 #define MOVE_LEFT1 MOVE_HOR(-1400)
 #define MOVE_RIGHT1 MOVE_HOR(1400)
 
-/ {
-    macros {
+{
+        macros {
         clipitpoggers: clipitpoggers {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -41,6 +41,9 @@
         };
     };
 
+}
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
