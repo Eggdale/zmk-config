@@ -40,7 +40,6 @@
                 , <&macro_press &mkp LCLK>
                 ;
         };
-    };
 
     keymap {
         compatible = "zmk,keymap";
