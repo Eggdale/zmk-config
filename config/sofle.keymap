@@ -15,10 +15,11 @@
 #define MOVE_LEFT1 MOVE_HOR(-1400)
 #define MOVE_RIGHT1 MOVE_HOR(1400)
 
-{
-        macros {
+/ {
+    macros {
         clipitpoggers: clipitpoggers {
             compatible = "zmk,behavior-macro";
+            #wait-ms = <10>
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>
@@ -28,10 +29,10 @@
         };
         imagesaver: imagesaver {
             compatible = "zmk,behavior-macro";
+            #wait-ms = <20>
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 20>
-                , <&macro_press &mkp RCLK>
+                = <&macro_press &mkp RCLK>
                 , <&macro_tap &kp V>
                 , <&macro_pause_for_release>
                 , <&macro_tap &kp RET>
@@ -41,9 +42,6 @@
         };
     };
 
-}
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
