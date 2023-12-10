@@ -17,20 +17,15 @@
 
 / {
     macros {
-        clipitpoggers: clipitpoggers {
-            compatible = "zmk,behavior-macro";
-            #wait-ms = <10>
-            #binding-cells = <0>;
+        ZMK_MACRO(clipitpoggers,
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp C>
                 , <&macro_release &kp LALT>
                 ;
-        };
-        imagesaver: imagesaver {
-            compatible = "zmk,behavior-macro";
-            #wait-ms = <20>
-            #binding-cells = <0>;
+        );
+        ZMK_MACRO(imagesaver,
+            wait-ms = <10>;
             bindings
                 = <&macro_press &mkp RCLK>
                 , <&macro_tap &kp V>
@@ -38,8 +33,9 @@
                 , <&macro_tap &kp RET>
                 , <&macro_wait_time 250>
                 , <&macro_press &mkp LCLK>
-                ;
-        };
+                ;        
+        )
+    };
 
     keymap {
         compatible = "zmk,keymap";
