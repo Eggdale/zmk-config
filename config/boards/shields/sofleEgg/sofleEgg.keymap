@@ -93,8 +93,8 @@
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &kp F12    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6    &kp F7    &kp F8   &kp F9    &kp F10  &kp F11
-&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &mwh SCROLL_UP   &mkp LCLK      &mmv MOVE_UP1    &mkp RCLK       &trans   &trans
-&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &mwh SCROLL_DOWN &mmv MOVE_LEFT1 &mmv MOVE_DOWN1  &mmv MOVE_RIGHT1 &trans   &trans
+&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &mwh SCROLL_UP 1   &mkp LCLK      &mmv MOVE_UP 1    &mkp RCLK       &trans   &trans
+&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &mwh SCROLL_DOWN 1 &mmv MOVE_LEFT 1 &mmv MOVE_DOWN 1  &mmv MOVE_RIGHT 1 &trans   &trans
 &trans     &trans       &trans       &trans       &trans       &imagesaver  &none    &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &out OUT_TOG
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
