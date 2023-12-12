@@ -19,7 +19,7 @@
     macros {
         clipitpoggers: clipitpoggers {
             compatible = "zmk,behavior-macro";
-            #wait-ms = <10>
+            #wait-ms = <10>;
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>
@@ -29,7 +29,7 @@
         };
         imagesaver: imagesaver {
             compatible = "zmk,behavior-macro";
-            #wait-ms = <20>
+            #wait-ms = <20>;
             #binding-cells = <0>;
             bindings
                 = <&macro_press &mkp RCLK>
