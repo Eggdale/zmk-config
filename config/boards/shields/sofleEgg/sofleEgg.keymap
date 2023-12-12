@@ -18,6 +18,7 @@
 / {
     macros {
         clipitpoggers: clipitpoggers {
+            label = "clipitpoggers";
             compatible = "zmk,behavior-macro";
             #wait-ms = <10>;
             #binding-cells = <0>;
@@ -28,6 +29,7 @@
                 ;
         };
         imagesaver: imagesaver {
+            label = "imagesaver";
             compatible = "zmk,behavior-macro";
             #wait-ms = <20>;
             #binding-cells = <0>;
