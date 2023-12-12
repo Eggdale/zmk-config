@@ -1,5 +1,5 @@
 config SHIELD_SOFLEEGG_LEFT
-    def_bool $(shields_list_contains,SofleEgg_left)
+    def_bool $(shields_list_contains,sofleEgg_left)
 
 config SHIELD_SOFLEEGG_RIGHT
-    def_bool $(shields_list_contains,SofleEgg_right)
+    def_bool $(shields_list_contains,sofleEgg_right)
