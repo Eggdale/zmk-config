@@ -17,3 +17,5 @@ include:
     shield: sofleEgg_left
   - board: nice_nano_v2
     shield: sofleEgg_right
+  - board: nice_nano_v2
+    shield: settings_reset
