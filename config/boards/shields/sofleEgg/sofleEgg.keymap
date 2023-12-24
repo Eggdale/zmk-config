@@ -31,7 +31,7 @@
         imagesaver: imagesaver {
             label = "imagesaver";
             compatible = "zmk,behavior-macro";
-            #wait-ms = <250>;
+            #wait-ms = <500>;
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &mkp RCLK>
