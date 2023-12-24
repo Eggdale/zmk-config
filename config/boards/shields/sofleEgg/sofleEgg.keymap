@@ -34,7 +34,7 @@
             #wait-ms = <500>;
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 750>
+                = <&macro_wait_time 250>
                 , <&macro_tap &mkp RCLK>
                 , <&macro_tap &kp V>
                 , <&macro_pause_for_release>
