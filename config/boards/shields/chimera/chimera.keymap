@@ -15,6 +15,10 @@
 #define MOVE_LEFT1 MOVE_HOR(-1400)
 #define MOVE_RIGHT1 MOVE_HOR(1400)
 
+&led_strip {
+    chain-length = <31>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
