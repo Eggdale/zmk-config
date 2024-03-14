@@ -1,14 +1,14 @@
-if yarisugi_left
+if chimera_left
 
 config ZMK_KEYBOARD_NAME
-    default "Yarisugi"
+    default "Chimera"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if yarisugi_left || yarisugi_right
+if chimera_left || chimera_right
 
 config ZMK_SPLIT
     default y

@@ -1,8 +1,8 @@
 file_format: "1"
-id: yarisugi
-name: Yarisugi
+id: chimera
+name: Chimera
 type: shield
-url: https://github.com/eggdale/yarisugi
+url: https://github.com/eggdale/chimera
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +10,5 @@ features:
   - display
   - encoder
 siblings:
-  - yarisugi_left
-  - yarisugi_right
+  - chimera_left
+  - chimera_right

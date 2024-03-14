@@ -1,4 +1,0 @@
-config yarisugi_left
-    def_bool $(shields_list_contains,yarisugi_left)
-config yarisugi_right
-    def_bool $(shields_list_contains,yarisugi_right)

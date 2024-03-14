@@ -23,9 +23,9 @@ mosi-pin = <24>;
 
 sck-pin = <100>;
 
-miso-pin = <2>; // unused on sweep
+miso-pin = <17>; // unused on sweep
 
-cs-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 };
 
 / {
