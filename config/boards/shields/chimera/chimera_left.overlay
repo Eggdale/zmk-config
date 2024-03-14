@@ -19,6 +19,6 @@ nice_view_spi: &spi0 {
     compatible = "nordic,nrf-spim";
     mosi-pin = <24>;
     sck-pin = <100>;
-    miso-pin = <&gpio1 2>; // unused on sweep
+    miso-pin = <&gpio1 2 GPIO_ACTIVE_HIGH>; // unused on sweep
     cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 };
