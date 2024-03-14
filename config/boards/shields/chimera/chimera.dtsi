@@ -57,11 +57,11 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         status = "disabled";
     };
 
-    sensors {
+    sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
     };
-
 };
 
 nice_view_spi: &spi0 {
@@ -74,4 +74,14 @@ nice_view_spi: &spi0 {
 
 &pro_micro_i2c {
     status = "disabled";
+};
+
+&left_encoder {
+    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
+
+&right_encoder {
+    a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };
