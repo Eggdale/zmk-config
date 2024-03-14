@@ -15,13 +15,6 @@
 #define MOVE_LEFT1 MOVE_HOR(-1400)
 #define MOVE_RIGHT1 MOVE_HOR(1400)
 
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    mosi-pin = <24>;
-    sck-pin = <100>;
-    miso-pin = <17>; // unused on sweep
-    cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
-};
 / {
     keymap {
         compatible = "zmk,keymap";
