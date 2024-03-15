@@ -12,3 +12,5 @@ if chimera_left || chimera_right
 
 config ZMK_SPLIT
     default y
+
+endif
