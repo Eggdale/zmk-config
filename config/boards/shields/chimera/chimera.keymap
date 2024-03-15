@@ -9,11 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define MOVE_UP1 MOVE_VERT(-1400)
-#define MOVE_DOWN1 MOVE_VERT(1400)
-#define MOVE_LEFT1 MOVE_HOR(-1400)
-#define MOVE_RIGHT1 MOVE_HOR(1400)
-
 &led_strip {
     chain-length = <31>;
     // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
