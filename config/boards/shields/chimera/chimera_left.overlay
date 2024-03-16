@@ -14,3 +14,10 @@
 &left_encoder {
     status = "okay";
 };
+
+&spi0 {
+    status = "okay";
+    glidepoint: glidepoint@2a{
+        status = "okay";
+    };
+};
