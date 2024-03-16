@@ -22,7 +22,7 @@
 // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
 // | CAPS  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | CTRL  |  Z  |  X  |  C   |  V   |  B   |   GUI  |  |  GUI  |  N   |  M    |  ,    |  .   |   /   |  F13  |
+// | CTRL  |  Z  |  X  |  C   |  V   |  B   |   MENU |  |  GUI  |  N   |  M    |  ,    |  .   |   /   |  F13  |
 //               |  [  |  ]   | LOWER| BKSPC|  SPACE |  | ENTER | LALT | RAISE |  =    |  -   |
             bindings = <
 &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                      &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
