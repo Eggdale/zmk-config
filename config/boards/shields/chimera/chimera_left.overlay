@@ -15,9 +15,6 @@
     status = "okay";
 };
 
-&spi1 {
+&glidepoint{
     status = "okay";
-    glidepoint: glidepoint {
-        status = "okay";
-    };
-};
+}
