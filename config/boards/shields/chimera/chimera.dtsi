@@ -64,21 +64,29 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         triggers-per-rotation = <20>;
     };
 
+    rot_mmv: sensor_rotate_mmv {
+        compatible = "zmk,behavior-sensor-rotate-var";
+        #sensor-binding-cells = <2>;
+        bindings = <&mmv>, <&mmv>;
+    };
+    rot_msc: sensor_rotate_msc {
+        compatible = "zmk,behavior-sensor-rotate-var";
+        #sensor-binding-cells = <2>;
+        bindings = <&msc>, <&msc>;
+    };
+
     nice_view_spi: nice_view_spi {
         status = "okay";
         cs-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>,<&gpio0 20 GPIO_ACTIVE_HIGH>;
         pinctrl-0 = <&nice_view_spi_default>;
         pinctrl-1 = <&nice_view_spi_sleep>;
         pinctrl-names = "default", "sleep";
-        #address-cells = <2>;
-        #size-cells = <1>;
 
-        nice_view: ls0xx@0 {
+        nice_view: ls0xx {
             compatible = "sharp,ls0xx";
             spi-max-frequency = <1000000>;
             width = <160>;
             height = <68>;
-            reg = <0>;
         };
 
         glidepoint: glidepoint {
