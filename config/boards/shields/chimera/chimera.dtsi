@@ -63,34 +63,35 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
-};
 
-&spi1 {
-    status = "okay";
-    cs-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>,<&gpio0 20 GPIO_ACTIVE_HIGH>;
-    pinctrl-0 = <&spi1_default>;
-    pinctrl-1 = <&spi1_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    nice_view_spi: nice_view_spi {
-        compatible = "nordic,nrf-spim";
+    spi1 {
         status = "okay";
-        spi-max-frequency = <1000000>;
-        label = "nice_view_spi";
-    };
+        cs-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>,<&gpio0 20 GPIO_ACTIVE_HIGH>;
+        pinctrl-0 = <&spi1_default>;
+        pinctrl-1 = <&spi1_sleep>;
+        pinctrl-names = "default", "sleep";
 
-    glidepoint: glidepoint {
-        compatible = "cirque,pinnacle";
-        status = "disabled";
-        spi-max-frequency = <2000000>;
-        dr-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
+        nice_view_spi: nice_view_spi {
+            compatible = "nordic,nrf-spim";
+            status = "okay";
+            spi-max-frequency = <1000000>;
+            label = "nice_view_spi";
+        };
 
-        sensitivity = "4x";
-        no-taps;
-        sleep;
-        label = "glidepoint";
+        glidepoint: glidepoint {
+            compatible = "cirque,pinnacle";
+            status = "disabled";
+            spi-max-frequency = <2000000>;
+            dr-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
+
+            sensitivity = "4x";
+            no-taps;
+            sleep;
+            label = "glidepoint";
+        };
     };
 };
+
 / {
   glidepoint_listener {
     compatible = "zmk,input-listener";
