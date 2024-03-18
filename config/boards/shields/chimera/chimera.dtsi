@@ -72,7 +72,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
                
     glidepoint: glidepoint@1 {
         compatible = "cirque,pinnacle";
-        reg = <0x1>;
+        reg = <1>;
         status = "disabled";
         spi-max-frequency = <2000000>;
         dr-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
