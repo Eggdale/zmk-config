@@ -17,7 +17,7 @@
 
 &spi0 {
     status = "okay";
-    glidepoint: glidepoint@2a{
+    glidepoint: glidepoint@1{
         status = "okay";
     };
 };
