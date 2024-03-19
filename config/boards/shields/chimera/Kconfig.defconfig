@@ -6,7 +6,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-    config NICE_VIEW_WIDGET_STATUS
+config NICE_VIEW_WIDGET_STATUS
     select LV_FONT_MONTSERRAT_18
     select LV_FONT_MONTSERRAT_14
     select LV_FONT_UNSCII_8
