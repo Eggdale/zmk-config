@@ -78,6 +78,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
 &nice_view_spi {
     status = "okay";
     cs-gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
+    pinctrl-0 = <&nice_view_spi_default>;
+    pinctrl-1 = <&nice_view_spi_sleep>;
+    pinctrl-names = "default", "sleep";
 
     glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
