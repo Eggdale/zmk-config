@@ -20,7 +20,7 @@ manifest:
     - name: zephyr
       remote: akscram
       revision: driver-input-pinnacle
-      import: app/west.yml
+      import: west.yml
     - name: zmk
       remote: petejohanson
       revision: feat/pointers-move-scroll
