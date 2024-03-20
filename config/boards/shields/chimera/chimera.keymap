@@ -10,11 +10,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-
-&led_strip {
-    chain-length = <31>;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
