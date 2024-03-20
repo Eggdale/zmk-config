@@ -15,6 +15,6 @@
     status = "okay";
 };
 
-&glidepoint@0{
+&glidepoint{
     status = "okay";
 };
