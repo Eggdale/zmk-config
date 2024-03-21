@@ -39,7 +39,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
-    }
+    };
     keymap {
         compatible = "zmk,keymap";
 
