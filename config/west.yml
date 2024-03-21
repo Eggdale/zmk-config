@@ -13,14 +13,14 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    #   import: app/west.yml
-    # - name: cirque-input-module
-    #   remote: petejohanson
-    #   revision: main
-    - name: zephyr
-      remote: akscram
-      revision: driver-input-pinnacle
-      import: west.yml
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: main
+      import: app/west.yml
+    # - name: zephyr
+    #   remote: akscram
+    #   revision: driver-input-pinnacle
+    #   import: west.yml
     - name: zmk
       remote: petejohanson
       revision: feat/pointers-move-scroll
