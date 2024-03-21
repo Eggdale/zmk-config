@@ -11,6 +11,12 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+#define SCROLL_UP SCROLL_Y(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_Y(-U_MOUSE_SCROLL_MAX)
+
+&msc {
+  time-to-max-speed-ms = <900>;                 /* <--- How long time until max speed is reached */
+};
 
 &led_strip {
     chain-length = <31>;
@@ -66,8 +72,8 @@
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &kp F12    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6    &kp F7    &kp F8   &kp F9    &kp F10  &kp F11
-&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &trans   &trans      &trans    &trans       &trans   &trans
-&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &trans &trans &trans  &trans &trans   &trans
+&trans     &trans       &kp C_PP     &trans       &kp C_VOL_UP &trans                  &msc SCRL_DOWN   &trans      &trans    &trans       &trans   &trans
+&trans     &kp C_PREV   &kp C_STOP   &kp C_NEXT   &kp C_VOL_DN &trans                  &msc SCRL_UP &trans &trans  &trans &trans   &trans
 &trans     &trans       &trans       &trans       &trans       &trans  &none    &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
