@@ -65,23 +65,11 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
-
-    rot_mmv: sensor_rotate_mmv {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&mmv>, <&mmv>;
-    };
-    rot_msc: sensor_rotate_msc {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-    };
     
     glidepoint_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint>;
 
-        y-invert;
         x-invert;
     };
 };

@@ -23,6 +23,23 @@
 };
 
 / {
+    behaviors {
+        rot_mmv: sensor_rotate_mmv {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&mmv>, <&mmv>;
+        };
+        rot_msc: sensor_rotate_msc {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+    }
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,7 +58,7 @@
                 &kp LBKT &kp RBKT &mo 1     &kp BSPC &kp SPACE &mt RSHFT RET &kp LALT  &mo 2 &kp EQUAL  &kp MINUS
             >;
 
-            sensor-bindings = <&rot_msc &inc_dec_kp C_VOL_UP C_VOL_DN >;
+            sensor-bindings = <&rot_msc &rgb_encoder>;
         };
 
         lower_layer {
@@ -60,7 +77,7 @@
                 &rgb_ug RGB_BRI &rgb_ug RGB_BRD      &trans    &trans    &trans   &trans    &trans       &trans    &kp KP_N0    &kp KP_DOT 
             >;
 
-            sensor-bindings = <&rot_msc &inc_dec_kp C_VOL_UP C_VOL_DN >;
+            sensor-bindings = <&rot_msc &rgb_encoder>;
         };
 
         raise_layer {
@@ -78,7 +95,7 @@
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&rot_msc &inc_dec_kp C_VOL_UP C_VOL_DN >;
+            sensor-bindings = <&rot_msc &rgb_encoder>;
         };
     };
 };
