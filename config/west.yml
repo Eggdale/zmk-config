@@ -2,8 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    # - name: petejohanson
+    #   url-base: https://github.com/petejohanson
+    - name: claybford
+      url-base: https://github.com/claybford
     - name: akscram
       url-base: https://github.com/akscram
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -17,8 +19,12 @@ manifest:
     #   remote: akscram
     #   revision: driver-input-pinnacle
     #   import: west.yml
+    # - name: zmk
+    #   remote: petejohanson
+    #   revision: feat/pointers-move-scroll
+    #   import: app/west.yml
     - name: zmk
-      remote: petejohanson
+      remote: claybford
       revision: feat/pointers-move-scroll
       import: app/west.yml
     - name: cirque-input-module
