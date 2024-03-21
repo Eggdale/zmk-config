@@ -15,3 +15,6 @@
     status = "okay";
 };
 
+&glidepoint{
+    status = "okay";
+};
