@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-#define SCROLL_UP SCROLL_Y(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_Y(-U_MOUSE_SCROLL_MAX)
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 &msc {
   time-to-max-speed-ms = <900>;                 /* <--- How long time until max speed is reached */
