@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <10>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_VERT(50)>, <&msc SCRL_VERT(-50)>;
         };
         rgb_encoder: rgb_encoder {
             compatible = "zmk,behavior-sensor-rotate";
