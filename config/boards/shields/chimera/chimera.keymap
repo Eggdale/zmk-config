@@ -15,9 +15,6 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 25    // 10
 
 &msc {
-    acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <400>;     // 300
-    delay-ms = <0>;                   // 0
 };
 
 &led_strip {
@@ -30,12 +27,20 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&mmv>, <&mmv>;
+
+            acceleration-exponent = <1>;      // 1
+            time-to-max-speed-ms = <500>;     // 300
+            delay-ms = <0>;    
         };
         rot_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            tap-ms = <10>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+            acceleration-exponent = <1>;      // 1
+            time-to-max-speed-ms = <400>;     // 300
+            delay-ms = <0>;                   // 0
         };
         rgb_encoder: rgb_encoder {
             compatible = "zmk,behavior-sensor-rotate";
