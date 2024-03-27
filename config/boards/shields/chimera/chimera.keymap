@@ -12,11 +12,11 @@
 #include <behaviors/mouse_keys.dtsi>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 60    // 10
 
 &msc {
     acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <400>;     // 300
+    time-to-max-speed-ms = <200>;     // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -40,7 +40,7 @@
         rot_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            tap-ms = <30>;
+            tap-ms = <10>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
         rgb_encoder: rgb_encoder {
