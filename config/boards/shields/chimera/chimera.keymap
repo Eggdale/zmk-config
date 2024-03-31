@@ -31,6 +31,34 @@
 };
 
 / {
+    macros {
+        clipitpoggers: clipitpoggers {
+            label = "clipitpoggers";
+            compatible = "zmk,behavior-macro";
+            #wait-ms = <10>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        imagesaver: imagesaver {
+            label = "imagesaver";
+            compatible = "zmk,behavior-macro";
+            #wait-ms = <500>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 250>
+                , <&macro_tap &mkp RCLK>
+                , <&macro_tap &kp V>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp RET>
+                , <&macro_tap &mkp LCLK>
+                ;
+        };
+    };
+
     behaviors {
         rot_mmv: sensor_rotate_mmv {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -74,13 +102,13 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  | NUMLCK|   /   |   *  |   -   |   INS |
-// |       |HOME |  UP |  END | PGUP |      |                   | HOME |  7    |   8   |   9  |   +   |       |
+// |       |HOME |  UP |  END | PGUP |imgsav|                   | HOME |  7    |   8   |   9  |   +   |       |
 // | PSCRN |LEFT | DOWN| RIGHT| PGDN |      |                   | END  |  4    |   5   |   6  |   ,   |       |
 // |       |     |RGBHU| RGBHD|RGBEFF|      |        |  | MENU  |  =   |  1    |   2   |   3  | ENTER |       |
 //               |RGBUP|RGBDN |      |      |        |  |       |      |       |   0   |   .  |
             bindings = <
 &kp ESC   &kp F1   &kp F2    &kp F3      &kp F4    &kp F5                       &kp F6       &kp KP_NLCK &kp KP_SLASH &kp KP_MULTIPLY   &kp KP_MINUS  &kp INS 
-&trans    &kp HOME &kp UP    &kp END   &kp PG_UP   &trans                       &kp HOME     &kp KP_N7 &kp KP_N8    &kp KP_N9         &kp KP_PLUS   &trans
+&trans    &kp HOME &kp UP    &kp END   &kp PG_UP   &imagesaver                       &kp HOME     &kp KP_N7 &kp KP_N8    &kp KP_N9         &kp KP_PLUS   &trans
 &kp PSCRN &kp LEFT &kp DOWN  &kp RIGHT &kp PG_DN   &trans                       &kp END      &kp KP_N4 &kp KP_N5    &kp KP_N6         &kp KP_COMMA  &trans
 &trans &trans &rgb_ug RGB_HUI &rgb_ug RGB_HUD &rgb_ug RGB_EFF &trans    &none    &kp K_APP &kp KP_EQUAL &kp KP_N1 &kp KP_N2    &kp KP_N3         &kp KP_ENTER  &trans
                 &rgb_ug RGB_BRI &rgb_ug RGB_BRD      &trans    &trans    &trans   &trans    &trans       &trans    &kp KP_N0    &kp KP_DOT 
